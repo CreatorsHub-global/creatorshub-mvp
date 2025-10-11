@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "suite": "ch-golden",
+    "model": "gpt-4o-mini",
+    "runAt": "2025-10-11T11:25:10.201Z",
+    "total": 4,
+    "passed": 4,
+    "pass_ratio": 1,
+    "avg_latency_ms": 3927,
+    "avg_includeScore": 1
+  },
+  "suiteMeta": {
+    "notes": "Representativa prompts för Creators Hub. Används i mini-evals."
+  },
+  "cases": [
+    {
+      "id": "onboarding-brief",
+      "prompt": "Svara på svenska med EXAKT 5 punktlistor (inga extra rader). Varje punkt ska börja med ordet följt av kolon och en kort instruktion. Använd exakt dessa ord en gång var: konto, profil, publicera, analytics, support. Exempelformat: \"konto: ...\".",
+      "mustInclude": [
+        "konto",
+        "profil",
+        "publicera",
+        "analytics",
+        "support"
+      ],
+      "output": "konto: Skapa ett nytt konto genom att registrera dig med din e-postadress.  \nprofil: Fyll i din profilinformation för att öka trovärdigheten.  \npublicera: Välj \"publicera\" för att dela ditt innehåll med följare.  \nanalytics: Analysera dina resultat för att förstå vad som fungerar.  \nsupport: Kontakta supporten om du har tekniska problem eller frågor.",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 3370,
+      "error": null
+    },
+    {
+      "id": "content-plan",
+      "prompt": "Svara endast med en Markdown-tabell med rubrikrad och två veckor dag-för-dag. Rubrikrad MÅSTE vara exakt: | vecka | dag | beskrivning | . Inga andra rubriker eller texter.",
+      "mustInclude": [
+        "vecka",
+        "dag",
+        "beskrivning"
+      ],
+      "output": "| vecka | dag | beskrivning |\n|-------|-----|-------------|\n| 1     | Mån | Beskrivning 1 |\n| 1     | Tis | Beskrivning 2 |\n| 1     | Ons | Beskrivning 3 |\n| 1     | Tors| Beskrivning 4 |\n| 1     | Fre | Beskrivning 5 |\n| 1     | Lör | Beskrivning 6 |\n| 1     | Sön | Beskrivning 7 |\n| 2     | Mån | Beskrivning 8 |\n| 2     | Tis | Beskrivning 9 |\n| 2     | Ons | Beskrivning 10 |\n| 2     | Tors| Beskrivning 11 |\n| 2     | Fre | Beskrivning 12 |\n| 2     | Lör | Beskrivning 13 |\n| 2     | Sön | Beskrivning 14 |",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 5442,
+      "error": null
+    },
+    {
+      "id": "post-caption",
+      "prompt": "Skriv exakt 3 rader (ingen extra text), var och en en kort svensk CTA-caption för en TikTok om USB-C-hörlurar. Minst EN av raderna måste innehålla exakt strängen \"USB-C\". Ingen emoji.",
+      "mustInclude": [
+        "USB-C"
+      ],
+      "output": "Upplev ljud som aldrig förr med USB-C-hörlurar!  \nSikta på kvalitet med varje musikstycke.  \nGör din musikupplevelse komplett idag!",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 1755,
+      "error": null
+    },
+    {
+      "id": "seo-snippets",
+      "prompt": "Skriv exakt 5 metabeskrivningar på svenska (varje rad separat), max 155 tecken vardera, och varje rad MÅSTE innehålla ordet \"mikrofon\".",
+      "mustInclude": [
+        "mikrofon"
+      ],
+      "output": "Upptäck våra bäst säljande mikrofoner som ger ljud av högsta kvalitet för alla dina inspelningar. Perfekt för både proffs och amatörer!\n\nFånga varje detalj med vår nya mikrofon som är designad för musikproduktion och poddande. Låt ditt röstprojekt blomstra!\n\nLetar du efter en prisvärd mikrofon? Kolla in vårt sortiment av mikrofoner som passar din budget utan att kompromissa på kvalitet!\n\nSänk ljudet av omgivningen med vår riktade mikrofon. Perfekt för intervjuer och fältinspelningar där klarhet är avgörande.\n\nUppgradera din streamingupplevelse med en högpresterande mikrofon. Gör din röst hörbar och fånga din publik direkt!",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 5141,
+      "error": null
+    }
+  ]
+}

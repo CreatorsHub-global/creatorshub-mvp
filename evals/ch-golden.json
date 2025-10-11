@@ -4,22 +4,22 @@
   "cases": [
     {
       "id": "onboarding-brief",
-      "prompt": "Du är CH-assistent. Skapa en 5-punkters onboarding-checklista för en ny kreatör i vår plattform, med fokus på första 24 timmarna.",
+      "prompt": "Svara på svenska med EXAKT 5 punktlistor (inga extra rader). Varje punkt ska börja med ordet följt av kolon och en kort instruktion. Använd exakt dessa ord en gång var: konto, profil, publicera, analytics, support. Exempelformat: \"konto: ...\".",
       "mustInclude": ["konto", "profil", "publicera", "analytics", "support"]
     },
     {
       "id": "content-plan",
-      "prompt": "Utifrån att kreatören gör tech-reviews på svenska: gör en 2-veckors innehållsplan med publiceringsdagar och kort beskrivning (tabell).",
+      "prompt": "Svara endast med en Markdown-tabell med rubrikrad och två veckor dag-för-dag. Rubrikrad MÅSTE vara exakt: | vecka | dag | beskrivning | . Inga andra rubriker eller texter.",
       "mustInclude": ["vecka", "dag", "beskrivning"]
     },
     {
       "id": "post-caption",
-      "prompt": "Skriv 3 varianter av en kort, koncis caption (svenska) för en TikTok om USB-C-hörlurar. Ton: lekfull, inga emojis.",
+      "prompt": "Skriv exakt 3 rader (ingen extra text), var och en en kort svensk CTA-caption för en TikTok om USB-C-hörlurar. Minst EN av raderna måste innehålla exakt strängen \"USB-C\". Ingen emoji.",
       "mustInclude": ["USB-C"]
     },
     {
       "id": "seo-snippets",
-      "prompt": "Ge 5 metabeskrivningar (<=155 tecken) för en guide om 'bästa budget-mikrofoner 2025'. Svenska.",
+      "prompt": "Skriv exakt 5 metabeskrivningar på svenska (varje rad separat), max 155 tecken vardera, och varje rad MÅSTE innehålla ordet \"mikrofon\".",
       "mustInclude": ["mikrofon"]
     }
   ]
