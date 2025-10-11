@@ -1,4 +1,5 @@
-﻿const fs = require("fs");
+﻿// @ts-nocheck
+const fs = require("fs");
 const path = require("path");
 
 function latestResult() {
@@ -41,3 +42,4 @@ function num(v, d) { const n = parseFloat(String(v)); return Number.isFinite(n) 
     console.log("✅ Evals gate PASSED");
   }
 })();
+

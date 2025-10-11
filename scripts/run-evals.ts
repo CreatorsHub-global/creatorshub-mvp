@@ -1,4 +1,5 @@
-﻿/**
+﻿// @ts-nocheck
+/**
  * Minimal "mini-evals" runner för Creators Hub.
  * Läser en JSON-fil med testfall, kör OpenAI, mäter enkla "mustInclude"-checks
  * och skriver resultat till evals/results-YYYYMMDD-HHmmss.json
@@ -156,3 +157,4 @@ main().catch((e) => {
   console.error(e);
   process.exit(1);
 });
+
