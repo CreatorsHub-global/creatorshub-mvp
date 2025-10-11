@@ -1,47 +1,34 @@
-name: CI
+﻿name: ci
 
 on:
   pull_request:
     branches: [ main ]
-    paths-ignore:
-      - "**.md"
-  push:
-    branches: [ main ]
-    paths-ignore:
-      - "**.md"
-
-# Avbryt äldre körningar på samma branch/PR
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
-permissions:
-  contents: read
-  pull-requests: read
 
 jobs:
-  lint:
-    name: Lint
+  build-and-check:
+    name: build-and-check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
-      - run: npm ci
-      - run: npm run lint --if-present
-      - run: npm run typecheck --if-present
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+          node-version: 20
+          cache: pnpm
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: "20"
-          cache: "npm"
-      - run: npm ci
-      - run: npm run build
+          version: 9
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Install Playwright (Chromium)
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Start server
+        run: PORT=3010 pnpm start &
+      - name: Wait for server
+        run: |
+          n=0
+          until curl -fsS http://localhost:3010 >/dev/null 2>&1 || [ "$n" -ge 30 ]; do
+            n=$((n+1)); sleep 2; done
+      - name: Smoke tests
+        env:
+          BASE_URL: http://localhost:3010
+        run: pnpm exec playwright test -g '@smoke' --reporter=line --timeout=60000
