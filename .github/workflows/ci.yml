@@ -1,12 +1,12 @@
-﻿name: ci
+﻿name: mvp-ci
 
 on:
   pull_request:
     branches: [ main ]
 
 jobs:
-  build-and-check:
-    name: build-and-check
+  gate:
+    name: gate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,7 +22,7 @@ jobs:
       - name: Install Playwright (Chromium)
         run: pnpm exec playwright install --with-deps chromium
       - name: Start server
-        run: PORT=3010 pnpm start &
+        run: PORT=3010 pnpm run dev &
       - name: Wait for server
         run: |
           n=0
