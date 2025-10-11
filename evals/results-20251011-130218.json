@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "suite": "ch-golden",
+    "model": "gpt-4o-mini",
+    "runAt": "2025-10-11T11:02:18.569Z",
+    "total": 4,
+    "passed": 3,
+    "pass_ratio": 0.75,
+    "avg_latency_ms": 4451,
+    "avg_includeScore": 0.85
+  },
+  "suiteMeta": {
+    "notes": "Representativa prompts för Creators Hub. Används i mini-evals."
+  },
+  "cases": [
+    {
+      "id": "onboarding-brief",
+      "prompt": "Du är CH-assistent. Skapa en 5-punkters onboarding-checklista för en ny kreatör i vår plattform, med fokus på första 24 timmarna.",
+      "mustInclude": [
+        "konto",
+        "profil",
+        "publicera",
+        "analytics",
+        "support"
+      ],
+      "output": "Självklart! Här är en 5-punkters onboarding-checklista för en ny kreatör:\n\n1. **Skapa och optimera profil**: Fyll i din profil med bio, profilbild och kontaktinformation för att göra ett gott intryck.\n\n2. **Utforska plattformen**: Gå igenom plattformens funktioner och verktyg, inklusive tutorials och guider, för att förstå hur allt fungerar.\n\n3. **Ladda upp första innehållet**: Skapa och publicera ditt första verk (video, bild, text, etc.) för att komma igång och börja bygga din publik.\n\n4. **Nätverka med andra kreatörer**: Följ och interagera med andra kreatörer på plattformen för att bygga relationer och få inspiration.\n\n5. **Sätt upp mål och planera innehåll**: Definiera dina mål för användningen av plattformen och gör en plan för framtida innehåll för att hålla fokus.",
+      "includeScore": 0.4,
+      "includeAll": false,
+      "missing": [
+        "konto",
+        "analytics",
+        "support"
+      ],
+      "latency_ms": 4647,
+      "error": null
+    },
+    {
+      "id": "content-plan",
+      "prompt": "Utifrån att kreatören gör tech-reviews på svenska: gör en 2-veckors innehållsplan med publiceringsdagar och kort beskrivning (tabell).",
+      "mustInclude": [
+        "vecka",
+        "dag",
+        "beskrivning"
+      ],
+      "output": "Här är en 2-veckors innehållsplan för tech-reviews:\n\n| Publiceringsdatum | Innehåll                          | Beskrivning                                                              |\n|-------------------|-----------------------------------|--------------------------------------------------------------------------|\n| 1. vecka           |                                   |                                                                          |\n| Måndag            | Recension: Senaste smartphone     | Granskning av den senaste modellen, funktioner och prestanda.           |\n| Onsdag            | Jämförelse: Laptops under 10,000 | Jämför tre populära bärbara datorer i budgetklassen.                    |\n| Fredag            | Tips: Bästa appar för produktivitet | Genomgång av appar som ökar produktiviteten på mobilen och datorn.    |\n|                     |                                   |                                                                          |\n| 2. vecka           |                                   |                                                                          |\n| Måndag            | Unboxing: Smart klocka           | Första intryck och detaljerad unboxing av en populär smartwatch.        |\n| Onsdag            | Recension: Gaming headset         | Djupgående granskning av ett nytt gaming headset och dess funktioner.   |\n| Fredag            | Guide: Så väljer du tvättmaskin   | Tips och råd om vad man bör tänka på när man väljer en tvättmaskin.   |\n\nSe till att justera ämnena baserat på aktuella produktlanseringar och intressen hos din publik!",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 6671,
+      "error": null
+    },
+    {
+      "id": "post-caption",
+      "prompt": "Skriv 3 varianter av en kort, koncis caption (svenska) för en TikTok om USB-C-hörlurar. Ton: lekfull, inga emojis.",
+      "mustInclude": [
+        "USB-C"
+      ],
+      "output": "1. \"Hörlurar som alltid är redo för action! USB-C till räddning.\"\n2. \"Säg adjö till adapterkrångel – USB-C-hörlurar gör livet enklare!\"\n3. \"Lyssna smidigt, njut max – USB-C-hörlurar är framtiden!\"",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 2276,
+      "error": null
+    },
+    {
+      "id": "seo-snippets",
+      "prompt": "Ge 5 metabeskrivningar (<=155 tecken) för en guide om 'bästa budget-mikrofoner 2025'. Svenska.",
+      "mustInclude": [
+        "mikrofon"
+      ],
+      "output": "1. Upptäck de bästa budget-mikrofonerna 2025! Få ljudkvalitet utan att spränga banken med vår kompletta guide.\n   \n2. Letar du efter en prisvärd mikrofon? Kolla in vår guide till de bästa budgetalternativen för 2025!\n\n3. Här är de bästa budget-mikrofonerna för 2025! Perfekta för poddsändningar, streaming och inspelningar.\n\n4. Maximera ditt ljud med de mest prisvärda mikrofonerna 2025! Läs vår guide för att hitta den perfekta modellen.\n\n5. Bästa budget-mikrofonerna 2025! Upptäck prisvärda alternativ för professionellt ljud utan att tömma plånboken.",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 4211,
+      "error": null
+    }
+  ]
+}

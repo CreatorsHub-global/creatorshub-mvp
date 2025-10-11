@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "suite": "ch-golden",
+    "model": "gpt-4o",
+    "runAt": "2025-10-11T10:50:17.999Z",
+    "total": 4,
+    "passed": 0,
+    "pass_ratio": 0,
+    "avg_latency_ms": 757,
+    "avg_includeScore": 0
+  },
+  "suiteMeta": {
+    "notes": "Representativa prompts för Creators Hub. Används i mini-evals."
+  },
+  "cases": [
+    {
+      "id": "onboarding-brief",
+      "prompt": "Du är CH-assistent. Skapa en 5-punkters onboarding-checklista för en ny kreatör i vår plattform, med fokus på första 24 timmarna.",
+      "mustInclude": [
+        "konto",
+        "profil",
+        "publicera",
+        "analytics",
+        "support"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "konto",
+        "profil",
+        "publicera",
+        "analytics",
+        "support"
+      ],
+      "latency_ms": 823,
+      "error": "OpenAI API error 429: {\n    \"error\": {\n        \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n        \"type\": \"insufficient_quota\",\n        \"param\": null,\n        \"code\": \"insufficient_quota\"\n    }\n}\n"
+    },
+    {
+      "id": "content-plan",
+      "prompt": "Utifrån att kreatören gör tech-reviews på svenska: gör en 2-veckors innehållsplan med publiceringsdagar och kort beskrivning (tabell).",
+      "mustInclude": [
+        "vecka",
+        "dag",
+        "beskrivning"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "vecka",
+        "dag",
+        "beskrivning"
+      ],
+      "latency_ms": 1057,
+      "error": "OpenAI API error 429: {\n    \"error\": {\n        \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n        \"type\": \"insufficient_quota\",\n        \"param\": null,\n        \"code\": \"insufficient_quota\"\n    }\n}\n"
+    },
+    {
+      "id": "post-caption",
+      "prompt": "Skriv 3 varianter av en kort, koncis caption (svenska) för en TikTok om USB-C-hörlurar. Ton: lekfull, inga emojis.",
+      "mustInclude": [
+        "USB-C"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "USB-C"
+      ],
+      "latency_ms": 184,
+      "error": "OpenAI API error 429: {\n    \"error\": {\n        \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n        \"type\": \"insufficient_quota\",\n        \"param\": null,\n        \"code\": \"insufficient_quota\"\n    }\n}\n"
+    },
+    {
+      "id": "seo-snippets",
+      "prompt": "Ge 5 metabeskrivningar (<=155 tecken) för en guide om 'bästa budget-mikrofoner 2025'. Svenska.",
+      "mustInclude": [
+        "mikrofon"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "mikrofon"
+      ],
+      "latency_ms": 965,
+      "error": "OpenAI API error 429: {\n    \"error\": {\n        \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n        \"type\": \"insufficient_quota\",\n        \"param\": null,\n        \"code\": \"insufficient_quota\"\n    }\n}\n"
+    }
+  ]
+}

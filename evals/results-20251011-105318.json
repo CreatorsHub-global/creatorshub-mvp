@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "suite": "ch-golden",
+    "model": "gpt-4o-mini",
+    "runAt": "2025-10-11T08:53:18.314Z",
+    "total": 2,
+    "passed": 0,
+    "pass_ratio": 0,
+    "avg_latency_ms": 1756,
+    "avg_includeScore": 0
+  },
+  "suiteMeta": {
+    "notes": "Representativa prompts för Creators Hub. Används i mini-evals."
+  },
+  "cases": [
+    {
+      "id": "ping",
+      "prompt": "Svara exakt med ordet: pong",
+      "mustInclude": [
+        "pong"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "pong"
+      ],
+      "latency_ms": 660,
+      "error": "OpenAI API error 401: {\n    \"error\": {\n        \"message\": \"Incorrect API key provided: sk-...DI***************L.... You can find your API key at https://platform.openai.com/account/api-keys.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"invalid_api_key\"\n    }\n}\n"
+    },
+    {
+      "id": "title",
+      "prompt": "Skriv exakt: Creators Hub",
+      "mustInclude": [
+        "Creators Hub"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "Creators Hub"
+      ],
+      "latency_ms": 2852,
+      "error": "OpenAI API error 401: {\n    \"error\": {\n        \"message\": \"Incorrect API key provided: sk-...DI***************L.... You can find your API key at https://platform.openai.com/account/api-keys.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"invalid_api_key\"\n    }\n}\n"
+    }
+  ]
+}

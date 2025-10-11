@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "suite": "ch-golden",
+    "model": "gpt-4o-mini",
+    "runAt": "2025-10-11T10:57:20.121Z",
+    "total": 4,
+    "passed": 3,
+    "pass_ratio": 0.75,
+    "avg_latency_ms": 5189,
+    "avg_includeScore": 0.9
+  },
+  "suiteMeta": {
+    "notes": "Representativa prompts för Creators Hub. Används i mini-evals."
+  },
+  "cases": [
+    {
+      "id": "onboarding-brief",
+      "prompt": "Du är CH-assistent. Skapa en 5-punkters onboarding-checklista för en ny kreatör i vår plattform, med fokus på första 24 timmarna.",
+      "mustInclude": [
+        "konto",
+        "profil",
+        "publicera",
+        "analytics",
+        "support"
+      ],
+      "output": "Självklart! Här är en 5-punkters onboarding-checklista för en ny kreatör i Creators Hub:\n\n1. **Registrera och verifiera konto**  \n   Skapa ditt konto och bekräfta din e-postadress för att aktivera ditt medlemskap.\n\n2. **Profileringsinställningar**  \n   Fyll i din profil med en bio, profilbild och länka till dina sociala medier.\n\n3. **Utforska plattformen**  \n   Ta en rundtur i Creators Hub och bekanta dig med de olika verktygen och funktionerna.\n\n4. **Skapa och publicera första innehållet**  \n   Skapa ditt första inlägg eller projekt, välj en kategori och publicera det.\n\n5. **Gå med i communityn**  \n   Delta i forum och diskussionsgrupper för att nätverka med andra kreatörer och få inspiration.",
+      "includeScore": 0.6,
+      "includeAll": false,
+      "missing": [
+        "analytics",
+        "support"
+      ],
+      "latency_ms": 6644,
+      "error": null
+    },
+    {
+      "id": "content-plan",
+      "prompt": "Utifrån att kreatören gör tech-reviews på svenska: gör en 2-veckors innehållsplan med publiceringsdagar och kort beskrivning (tabell).",
+      "mustInclude": [
+        "vecka",
+        "dag",
+        "beskrivning"
+      ],
+      "output": "Här är en 2-veckors innehållsplan för tech-reviews på svenska:\n\n| Publiceringsdag | Innehållsbeskrivning                                |\n|-----------------|-----------------------------------------------------|\n| Måndag vecka 1  | Review av den senaste smarttelefonen på marknaden. |\n| Tisdag vecka 1  | Jämförelse av två populära trådlösa hörlurar.      |\n| Torsdag vecka 1 | Tips och tricks för att optimera din dator.        |\n| Lördag vecka 1  | Unboxing av en ny smartklocka med första intryck.  |\n| Måndag vecka 2  | Genomgång av de bästa apparna för produktivitet.   |\n| Onsdag vecka 2   | Review av en gaming-laptop och dess prestanda.     |\n| Fredag vecka 2  | Frågestund där tittarna kan ställa frågor om tech.  |\n| Söndag vecka 2  | Sammanfattning av veckans tech-nyheter och trender. |\n\nDenna plan ger en varierad och engagerande innehållsstrategi över två veckor!",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 6587,
+      "error": null
+    },
+    {
+      "id": "post-caption",
+      "prompt": "Skriv 3 varianter av en kort, koncis caption (svenska) för en TikTok om USB-C-hörlurar. Ton: lekfull, inga emojis.",
+      "mustInclude": [
+        "USB-C"
+      ],
+      "output": "1. \"Säg hej till friheten med USB-C-hörlurar – ljudet har aldrig låtit bättre!\"\n2. \"Gör hörlursbytet enkelt med USB-C – det är dags att njuta av musiken utan krångel.\"\n3. \"USB-C-hörlurar: den perfekta kombon av stil och funktion – låt musiken flöda!\"",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 2933,
+      "error": null
+    },
+    {
+      "id": "seo-snippets",
+      "prompt": "Ge 5 metabeskrivningar (<=155 tecken) för en guide om 'bästa budget-mikrofoner 2025'. Svenska.",
+      "mustInclude": [
+        "mikrofon"
+      ],
+      "output": "1. Upptäck de bästa budgetmikrofonerna 2025 – perfekt ljud utan att spräcka plånboken!\n2. Hitta din ideala budgetmikrofon 2025 med vår guide! Maximera ljudkvaliteten till lågt pris.\n3. Spara pengar och få toppkvalitet! Kolla in våra bästa budgetmikrofoner 2025.\n4. Letar du efter prisvärda mikrofoner? Se vår guide för de bästa budgetalternativen 2025!\n5. Få fantastisk ljudupptagning utan att betala för mycket! Bästa budgetmikrofoner 2025 i fokus.",
+      "includeScore": 1,
+      "includeAll": true,
+      "missing": [],
+      "latency_ms": 4590,
+      "error": null
+    }
+  ]
+}
