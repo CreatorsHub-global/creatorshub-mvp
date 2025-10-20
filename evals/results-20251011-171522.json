@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "suite": "ch-golden",
+    "model": "gpt-4o-mini",
+    "runAt": "2025-10-11T15:15:22.456Z",
+    "total": 4,
+    "passed": 0,
+    "pass_ratio": 0,
+    "avg_latency_ms": 369,
+    "avg_includeScore": 0
+  },
+  "suiteMeta": {
+    "notes": "Representativa prompts för Creators Hub. Används i mini-evals."
+  },
+  "cases": [
+    {
+      "id": "onboarding-brief",
+      "prompt": "Svara på svenska med EXAKT 5 punktlistor (inga extra rader). Varje punkt ska börja med ordet följt av kolon och en kort instruktion. Använd exakt dessa ord en gång var: konto, profil, publicera, analytics, support. Exempelformat: \"konto: ...\".",
+      "mustInclude": [
+        "konto",
+        "profil",
+        "publicera",
+        "analytics",
+        "support"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "konto",
+        "profil",
+        "publicera",
+        "analytics",
+        "support"
+      ],
+      "latency_ms": 636,
+      "error": "OpenAI API error 401: {\n    \"error\": {\n        \"message\": \"Incorrect API key provided: sk-proj-************l.... You can find your API key at https://platform.openai.com/account/api-keys.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"invalid_api_key\"\n    }\n}\n"
+    },
+    {
+      "id": "content-plan",
+      "prompt": "Svara endast med en Markdown-tabell med rubrikrad och två veckor dag-för-dag. Rubrikrad MÅSTE vara exakt: | vecka | dag | beskrivning | . Inga andra rubriker eller texter.",
+      "mustInclude": [
+        "vecka",
+        "dag",
+        "beskrivning"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "vecka",
+        "dag",
+        "beskrivning"
+      ],
+      "latency_ms": 295,
+      "error": "OpenAI API error 401: {\n    \"error\": {\n        \"message\": \"Incorrect API key provided: sk-proj-************l.... You can find your API key at https://platform.openai.com/account/api-keys.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"invalid_api_key\"\n    }\n}\n"
+    },
+    {
+      "id": "post-caption",
+      "prompt": "Skriv exakt 3 rader (ingen extra text), var och en en kort svensk CTA-caption för en TikTok om USB-C-hörlurar. Minst EN av raderna måste innehålla exakt strängen \"USB-C\". Ingen emoji.",
+      "mustInclude": [
+        "USB-C"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "USB-C"
+      ],
+      "latency_ms": 277,
+      "error": "OpenAI API error 401: {\n    \"error\": {\n        \"message\": \"Incorrect API key provided: sk-proj-************l.... You can find your API key at https://platform.openai.com/account/api-keys.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"invalid_api_key\"\n    }\n}\n"
+    },
+    {
+      "id": "seo-snippets",
+      "prompt": "Skriv exakt 5 metabeskrivningar på svenska (varje rad separat), max 155 tecken vardera, och varje rad MÅSTE innehålla ordet \"mikrofon\".",
+      "mustInclude": [
+        "mikrofon"
+      ],
+      "output": "",
+      "includeScore": 0,
+      "includeAll": false,
+      "missing": [
+        "mikrofon"
+      ],
+      "latency_ms": 267,
+      "error": "OpenAI API error 401: {\n    \"error\": {\n        \"message\": \"Incorrect API key provided: sk-proj-************l.... You can find your API key at https://platform.openai.com/account/api-keys.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"invalid_api_key\"\n    }\n}\n"
+    }
+  ]
+}

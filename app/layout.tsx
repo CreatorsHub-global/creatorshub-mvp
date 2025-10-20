@@ -1,17 +1,15 @@
 ﻿import "./globals.css";
-import Providers from "./providers";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "CreatorsHub",
-  description: "Everything begins with a line",
+export const metadata: Metadata = {
+  title: "CreatorsHub MVP",
+  description: "MVP demo",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-black text-white">
-        <Providers>{children}</Providers>
-      </body>
+    <html lang="sv">
+      <body className="bg-neutral-950 text-neutral-100">{children}</body>
     </html>
   );
 }
