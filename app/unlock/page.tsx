@@ -1,7 +1,11 @@
-﻿'use client';
+﻿/* eslint-disable @next/next/no-img-element */
+"use client";
 
+import React, { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import React from "react";
+import Link from "next/link";
+
+export const dynamic = "force-dynamic"; // undvik statisk prerender av /unlock
 
 function b64urlDecode(s: string) {
   s = s.replace(/-/g, "+").replace(/_/g, "/");
@@ -10,13 +14,29 @@ function b64urlDecode(s: string) {
   try { return atob(s); } catch { return ""; }
 }
 
-export default function UnlockPage() {
+function UnlockInner() {
   const sp = useSearchParams();
   const token = sp.get("token") || "";
   let payload: any = null;
   try { payload = JSON.parse(b64urlDecode(token)); } catch {}
 
   const valid = payload && payload.email && payload.exp && payload.exp > Date.now();
+  const [receiptSent, setReceiptSent] = useState(false);
+
+  useEffect(() => {
+    if (!valid) return;
+    const key = `receipt:${token}`;
+    if (typeof window !== "undefined" && !localStorage.getItem(key)) {
+      fetch("/api/receipt", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token })
+      }).then(() => {
+        localStorage.setItem(key, "1");
+        setReceiptSent(true);
+      }).catch(() => {});
+    }
+  }, [valid, token]);
 
   const demoImages = [
     { full: "https://picsum.photos/seed/ch1/1600/900", caption: "Sketch → Lines → Color" },
@@ -29,7 +49,6 @@ export default function UnlockPage() {
       <main className="min-h-screen grid place-items-center bg-neutral-950 text-neutral-100 p-6">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-2">Länken är ogiltig eller utgången</h1>
-          <p className="text-neutral-400">Be om en ny magisk länk eller köp igen.</p>
         </div>
       </main>
     );
@@ -56,7 +75,39 @@ export default function UnlockPage() {
             </figure>
           ))}
         </div>
+
+        <div className="mt-6 flex gap-3">
+          <a
+            href="/process-pack-demo.zip"
+            download
+            className="px-4 py-3 rounded-xl border border-neutral-700 hover:bg-neutral-900 inline-block"
+          >
+            Ladda ner allt (.zip)
+          </a>
+          <Link
+            href="/"
+            className="px-4 py-3 rounded-xl border border-neutral-800 hover:bg-neutral-900 inline-block"
+          >
+            Till startsidan
+          </Link>
+        </div>
+
+        {receiptSent && (
+          <p className="text-neutral-500 text-sm mt-6">Kvitto & länk skickades till {payload.email}.</p>
+        )}
       </main>
     </div>
+  );
+}
+
+export default function UnlockPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen grid place-items-center bg-neutral-950 text-neutral-100 p-6">
+        <div className="text-center"><p>Laddar…</p></div>
+      </main>
+    }>
+      <UnlockInner />
+    </Suspense>
   );
 }
