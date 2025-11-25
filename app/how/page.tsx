@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function HowPage() {
   return (
@@ -20,12 +21,10 @@ export default function HowPage() {
           <li>3. De som verkligen bryr sig får en speciell digital access – och du vet vilka de är.</li>
         </ol>
 
-        <a
-          href="/"
-          className="px-5 py-3 rounded-2xl bg-white text-neutral-900 font-semibold hover:opacity-90 inline-block"
-        >
-          Tillbaka till startsidan
-        </a>
+        <Link href="/" className="...">
+  ...
+</Link>
+
       </div>
     </div>
   );

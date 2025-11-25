@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function CreatorPage() {
   const [creatorName, setCreatorName] = useState("");
@@ -151,13 +152,14 @@ export default function CreatorPage() {
             </div>
 
             <div className="mt-6">
-              <a
-                href="/"
-                className="text-sm text-neutral-400 hover:text-neutral-200 underline"
-              >
-                Tillbaka till startsidan
-              </a>
-            </div>
+  <Link
+    href="/"
+    className="text-sm text-neutral-400 hover:text-neutral-200 underline"
+  >
+    Tillbaka till startsidan
+  </Link>
+</div>
+
           </form>
 
           {/* Förhandsvisning */}
