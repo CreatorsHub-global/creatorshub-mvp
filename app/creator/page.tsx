@@ -29,7 +29,7 @@ export default function CreatorPage() {
   const previewWhat =
     what ||
     "Skisser, process-steg, hi-res nedladdning och en personlig kommentar.";
-  const previewPrice = price || "99";
+  const previewPrice = price || "10";
   const previewSlots = slots || "25";
 
   return (
