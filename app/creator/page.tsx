@@ -55,7 +55,7 @@ export default function CreatorPage() {
                 type="text"
                 value={creatorName}
                 onChange={(e) => setCreatorName(e.target.value)}
-                placeholder={`T.ex. "Oskar Aspman" eller "Aspman Studio"`}
+                placeholder={`T.ex. "Aspman Studio" eller "Westerberg Studio"`}
                 className="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-white"
               />
             </div>
