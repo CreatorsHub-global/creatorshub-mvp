@@ -14,7 +14,7 @@ export default function FanPage() {
         </p>
 
         <h1 className="text-2xl md:text-3xl font-bold mb-2">
-          Backstage-paket – "City Lines"
+          Backstage-paket – City Lines
         </h1>
 
         <p className="text-sm md:text-base text-neutral-300 mb-4">
