@@ -19,24 +19,25 @@ const Intro = () => {
         </p>
 
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <button
-            className="px-5 py-3 rounded-2xl bg-white text-neutral-900 font-semibold hover:opacity-90"
-            onClick={() => {
-              window.location.href = "/creator";
-            }}
-          >
-            Jag är kreatör
-          </button>
-          <button
-            className="px-5 py-3 rounded-2xl border border-neutral-600 text-neutral-100 hover:bg-neutral-900"
-            onClick={() => {
-              window.location.href = "/how";
-            }}
-          >
-            Visa mig hur
-          </button>
-        </div>
+      <div className="flex flex-col items-center justify-center gap-3">
+  <button
+    className="px-5 py-3 rounded-2xl bg-white text-neutral-900 font-semibold hover:opacity-90"
+    onClick={() => { window.location.href = "/creator"; }}
+  >
+    Jag är kreatör
+  </button>
+</div>
+
+<p className="mt-4 text-sm text-neutral-400">
+  Vill du se hur det kan se ut för dina fans först?{" "}
+  <button
+    className="underline hover:text-white"
+  onClick={() => { window.location.href = "/fan"; }}
+  >
+    Se exempel (fansens vy)
+  </button>
+</p>
+
       </div>
 
       {/* NÄR ANVÄNDER DU VAD? */}
