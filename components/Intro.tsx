@@ -5,17 +5,19 @@ const Intro = () => {
     <div className="min-h-screen bg-black text-white">
       {/* HERO */}
       <div className="max-w-3xl mx-auto px-6 py-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          CreatorsHub – för riktiga fans
-        </h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-3">
+  CreatorsHub
+</h1>
 
-        <p className="text-lg md:text-xl text-neutral-300 mb-8">
-          Små backstage-paket med bilder, skisser och process – för fans som vill se hur dina bilder faktiskt blir till.
-        </p>
+<p className="text-xl md:text-2xl text-neutral-200 mb-3">
+  Små backstage-drops för dina riktiga fans.
+</p>
 
-
-                <p className="text-sm md:text-base text-neutral-500 mb-8">
-          Det du lägger på Instagram är torget. CreatorsHub är din studio backstage.
+<p className="text-sm md:text-base text-neutral-400 mb-8">
+  Det du lägger på Instagram är scenen.
+</p>
+<p className="text-sm md:text-base text-neutral-400 mb-8">
+          CreatorsHub är din loge backstage.
         </p>
 
 
