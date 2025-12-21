@@ -25,7 +25,7 @@ export async function POST(req: Request) {
   const result = await resend.emails.send({
     from,
     to: email,
-    subject: "Din magiska länk – CreatorsHub",
+    subject: "Din magiska lnk – CreatorsHub",
     html: `<p>Hej!</p><p>Här är din magiska länk:</p><p><a href="${url}">${url}</a></p><p>Giltig i 15 minuter.</p>`,
     text: `Hej! Din magiska länk: ${url} (giltig i 15 minuter)`,
   });
