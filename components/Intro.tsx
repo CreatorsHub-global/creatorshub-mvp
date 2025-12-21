@@ -6,40 +6,41 @@ const Intro = () => {
       {/* HERO */}
       <div className="max-w-3xl mx-auto px-6 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-3">
-  CreatorsHub
-</h1>
+          Här slutar du skapa för algoritmen.
+          <br />
+          Här börjar du skapa för de som följer dig på riktigt.
+        </h1>
 
-<p className="text-xl md:text-2xl text-neutral-200 mb-3">
-  Små backstage-drops för dina riktiga fans.
-</p>
-
-<p className="text-sm md:text-base text-neutral-400 mb-8">
-  Det du lägger på Instagram är scenen.
-</p>
-<p className="text-sm md:text-base text-neutral-400 mb-8">
-          CreatorsHub är din loge backstage.
+        <p className="text-xl md:text-2xl text-neutral-200 mb-3">
+          En liten backstage-plats för dig och de som följer ditt skapande på riktigt.
         </p>
 
+        <p className="text-sm md:text-base text-neutral-400 mb-2">
+          Det du lägger på Instagram är scenen.
+        </p>
+        <p className="text-sm md:text-base text-neutral-400 mb-6">
+          CreatorsHub är din backstage-loge – ett komplement till sociala medier, inte en ersättare.
+        </p>
 
-      <div className="flex flex-col items-center justify-center gap-3">
-  <button
-    className="px-5 py-3 rounded-2xl bg-white text-neutral-900 font-semibold hover:opacity-90"
-    onClick={() => { window.location.href = "/creator"; }}
-  >
-    Jag är kreatör
-  </button>
-</div>
+        <div className="flex flex-col items-center justify-center gap-3">
+          <a
+            href="/creator"
+            className="px-5 py-3 rounded-2xl bg-white text-neutral-900 font-semibold hover:opacity-90"
+          >
+            Jag är kreatör
+          </a>
+        </div>
 
-<p className="mt-4 text-sm text-neutral-400">
-  Vill du se hur det kan se ut för dina fans först?{" "}
-  <button
-    className="underline hover:text-white"
-  onClick={() => { window.location.href = "/fan"; }}
-  >
-    Se exempel (fansens vy)
-  </button>
-</p>
+        <p className="mt-4 text-sm text-neutral-400">
+          Vill du se hur det kan se ut för dem som följer dig på riktigt först?{" "}
+          <a href="/fan" className="underline hover:text-white">
+            Se exempel (visningsläge)
+          </a>
+        </p>
 
+        <p className="mt-4 text-xs md:text-sm text-neutral-500 italic">
+          Create For The Few. Äg din konst. Äg din publik. Äg din resa.
+        </p>
       </div>
 
       {/* NÄR ANVÄNDER DU VAD? */}
@@ -80,11 +81,11 @@ const Intro = () => {
             <div className="text-sm uppercase tracking-wide text-neutral-400 mb-2">
               CreatorsHub
             </div>
-            <div className="font-semibold mb-2">Små backstage-drops</div>
+            <div className="font-semibold mb-2">Små backstage-släpp</div>
             <ul className="text-sm text-neutral-300 space-y-1">
               <li>· 2–3 gånger per år</li>
-              <li>· Backstage-paket med bilder, skisser, process</li>
-              <li>· För 10–100 riktiga fans</li>
+              <li>· Backstage-paket med ex process, bilder, skisser och halvfärdiga grejor. </li>
+              <li>· Du väljer vad du vill visa. För de som följer ditt skapande på riktigt</li>
             </ul>
           </div>
         </div>
@@ -96,17 +97,14 @@ const Intro = () => {
           <div>CreatorsHub · byggt i Stockholm</div>
           <div>
             Ansvarig: <span className="font-medium">James Mehks</span> ·{" "}
-            <a
-              href="mailto:james@creatorshub.global"
-              className="underline hover:text-neutral-200"
-            >
+            <a href="mailto:james@creatorshub.global">
               james@creatorshub.global
             </a>{" "}
             ·{" "}
             <a
               href="https://www.instagram.com/creatorshub.global"
               target="_blank"
-              className="underline hover:text-neutral-200"
+              rel="noreferrer"
             >
               Instagram: @creatorshub.global
             </a>
@@ -118,3 +116,5 @@ const Intro = () => {
 };
 
 export default Intro;
+
+
